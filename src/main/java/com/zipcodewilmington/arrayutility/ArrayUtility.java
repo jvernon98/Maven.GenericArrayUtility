@@ -31,7 +31,13 @@ public class ArrayUtility<X> {
 }
 
     public Integer getNumberOfOccurrences(X valueToEvaluate) {
-        return null;
+        int count = 0;
+        for (X element : this.inputArray){
+            if(element.equals(valueToEvaluate))
+            { count++;
+            }
+        }
+        return count;
     }
 
     public X getMostCommonFromMerge(X[] arrayToMerge) {
