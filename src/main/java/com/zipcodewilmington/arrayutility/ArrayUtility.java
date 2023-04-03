@@ -45,6 +45,9 @@ public class ArrayUtility<X> {
     }
 
     public X[] removeValue(X valueToRemove) {
-        return null;
+        while(this.inputArray.contains(valueToRemove)){
+            this.inputArray.remove(valueToRemove);
+        }
+        return this.inputArray.toArray(Arrays.copyOf(this.input, this.inputArray.size()));
     }
 }
